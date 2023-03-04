@@ -1,3 +1,3 @@
 <?php
 
-$xx = 99;//still prints 99
+$xx = 500;//still prints 99
