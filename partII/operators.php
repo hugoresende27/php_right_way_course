@@ -18,8 +18,8 @@ $x = ($y = 5) + 5;
 var_dump($x, $y);   // 10 , 5
 
 //$xx =77;
-$xx += 99;//still prints 99
-echo $xx;
+//$xx += 99;//still prints 99 if error not active
+//echo $xx;
 
 echo "<hr>";
 /* comparison Operators ( == === != !== <> ??  ?: ) */
@@ -61,3 +61,58 @@ var_dump( $y);    //bool(false)  $y is false
 echo "<hr>";
 $y = $xxx ?? "hello";
 var_dump( $y);    //string(5) "hello" because $xxx not exist
+
+
+/* error Handling Operators ( @ ) */
+$xxx = @file('foo.txt');    //supress the error, not recommended
+
+
+/* incremment/decrement Operators ( ++ -- ) */
+$x = null;
+echo $x++;
+echo $x--;
+
+/* logical Operators ( && || ! and or xor ) */
+$x = true;
+$y = false;
+echo "<hr>";
+
+var_dump($x || $y);//true
+var_dump($x && $y);//false
+$z = $x and $y; //true, because of precedence, first is evaluated ($z = $x) and $y
+var_dump($z);
+
+/* bitwise Operators ( & | ^ ~ << >>) */    //operator to turn a switch, on, off, bits, 0 , 1
+$x = 6;
+$y = 3;
+echo "<hr>";
+var_dump($x & $y);// int (2)
+//110
+//&
+//011
+//---
+//010 = 2
+var_dump($x | $y);// int (7)
+//110
+//&
+//011
+//---
+//111 = 7 //decimal sum
+var_dump($x ^ $y);// int (5)
+//110
+//^
+//011
+//---
+//010 = 5 //decimal sum
+
+echo "<hr>";
+/* array Operators ( + == === != <> !==) */
+$x = ['a', 'b', 'c'];
+$y = ['aa', 'bb', 'cc','ee','ii'];
+$i = ['a' => 1, 'b' => 2, 'c' => 3];
+
+$z = $x + $y;
+var_dump($z);//only adds ee and ii
+echo "<hr>";
+$z = $x + $i;
+var_dump($z);//only adds ee and ii
