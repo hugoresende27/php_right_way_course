@@ -9,5 +9,5 @@ echo "<a href='partI'> partI </a>";echo "<hr>";
 echo "<a href='partII/array.php'> partI </a>";echo "<hr>";
 echo "<a href='partIII/arrays_deep.php'> partI </a>";echo "<hr>";
 echo "<a href='partIIII/file_system.php'> partIV </a>";echo "<hr>";
-echo "<a href='ProjectA/public'> projectA </a>";echo "<hr>";
+echo "<a href='myProjectA/public'> projectA </a>";echo "<hr>";
 
