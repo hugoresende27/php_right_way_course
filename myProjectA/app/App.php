@@ -16,11 +16,29 @@ function getTransactionFiles(string $dirPath) : array {
         if (is_dir($file)){ //to skip directiories, and only get files
             continue;
         }
-        //TODO add verify if csv file
-        $files[] = $dirPath . $file;//add files to array
+
+        if (verifyCSV($file)){
+            $files[] = $dirPath . $file;//add files to array
+        }
+
     }
 
     return $files;
+}
+
+/**
+ * @param $file
+ * @return bool
+ * verify if csv file
+ */
+function verifyCSV($file) : bool {
+    $verify = explode('.', $file);
+    if (isset($verify[1])){
+        if ($verify[1] == "csv"){
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
