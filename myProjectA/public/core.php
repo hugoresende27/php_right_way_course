@@ -10,7 +10,8 @@ define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
 define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 
-require APP_PATH."App.php";
+require APP_PATH.'App.php';
+require APP_PATH.'helpers.php';
 
 $files = getTransactionFiles(FILES_PATH); //this function is in App.php, uses FILE_PATH var to get files in dir
 
@@ -20,7 +21,7 @@ $transactions = [];
 
 foreach ($files as $file){  //loop to get all files
 
-    $transactions = array_merge($transactions, getTransactions($file));
+    $transactions = array_merge($transactions, getTransactions($file, 'extractTransaction'));
 
 }
 

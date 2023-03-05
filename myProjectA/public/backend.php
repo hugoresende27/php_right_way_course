@@ -15,7 +15,11 @@ echo "files to transaction:: ".var_dump($files);
 echo "<hr>";
 
 echo "<pre>";
+var_dump(calculateTotals($transactions));
+echo "<hr>";
+
 var_dump($transactions);
+
 
 
 
