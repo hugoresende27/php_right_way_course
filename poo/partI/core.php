@@ -6,3 +6,8 @@ foreach ($dirFiles as $file){
         require 'myClasses/'.$file;
     }
 }
+
+function varDump($var) :void {
+    echo "<hr><pre style='font-size: 10pt'>";
+    var_dump($var);
+}
