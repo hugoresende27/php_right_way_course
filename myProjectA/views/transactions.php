@@ -43,7 +43,7 @@
                             <td>
 
 
-                                <?php ($color = $trans['amount'] < 0 ? 'red' : ($trans['amount'] > 0 ? 'green' : 'grey')) ?>
+                                <?php $color = $trans['amount'] < 0 ? 'red' : ($trans['amount'] > 0 ? 'green' : 'grey') ?>
                                 <span style="color:<?=$color ?>">
                                     <?= formatDollarAmount($trans['amount']) ?>
                                 </span>
