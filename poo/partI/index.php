@@ -9,7 +9,7 @@ require_once 'core.php';
 // create the object in the index
 
 echo "<hr><pre style='font-size: 10pt'>";
-$transaction = new Transaction(100,"transaction A");
+$transaction = new Transaction(100, "transaction A");
 var_dump($transaction);
 
 $transaction->addTax(8);
@@ -19,22 +19,22 @@ echo "</pre><hr>";
 echo $transaction->getAmount();
 
 $class = 'Transaction'; //can pass the class name in a var
-$transactionB = (new $class(100,"transaction B"))
-        ->addTax(8)
-        ->applyDiscount(10)
-        ->getAmount(); //if functions return object (return $this), i can chain functions
+$transactionB = (new $class(100, "transaction B"))
+    ->addTax(8)
+    ->applyDiscount(10)
+    ->getAmount(); //if functions return object (return $this), i can chain functions
 
-$transactionC = (new $class(500 , "transaction C"))
-        ->addTax(24)
-        ->applyDiscount(33)
-        ->getAmount();
+$transactionC = (new $class(500, "transaction C"))
+    ->addTax(24)
+    ->applyDiscount(33)
+    ->getAmount();
 //exit;
 echo "</pre><hr>";
 echo $transactionB;
 echo "<hr>";
 echo $transactionC;
 echo "<hr><pre>";
-$tt = new $class(19,'xxx');
+$tt = new $class(19, 'xxx');
 var_dump($tt);
 
 ///////////////////////////////////////////////////////////////////////////
@@ -64,9 +64,9 @@ var_dump($obj);
 /////////////////////////////////////
 ///  cast array to object
 
-$arra = [1,2,3];
+$arra = [1, 2, 3];
 
-$newObj = (object) $arra;   //cast array to object
+$newObj = (object)$arra;   //cast array to object
 
 $newObj->{4} = 2;
 
@@ -74,8 +74,8 @@ var_dump($newObj->{0});
 
 /////////////////////////////////////
 ///  cast integer to object
-$newObjB = (object) 1;   //["scalar"]=>int(1)
+$newObjB = (object)1;   //["scalar"]=>int(1)
 echo $newObjB->scalar;   // 1
 //make scalar key, to int, float, string, bool,
-$newObjC = (object) null;
-var_dump( $newObjC);   //object(stdClass)#7 (0) {}
+$newObjC = (object)null;
+var_dump($newObjC);   //object(stdClass)#7 (0) {}

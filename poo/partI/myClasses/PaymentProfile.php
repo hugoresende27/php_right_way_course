@@ -7,6 +7,6 @@ class PaymentProfile
 
     public function __construct()
     {
-        $this->id = rand(1,99);
+        $this->id = rand(1, 99);
     }
 }

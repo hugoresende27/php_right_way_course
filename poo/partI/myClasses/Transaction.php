@@ -2,7 +2,8 @@
 declare(strict_types=1);
 
 namespace myClasses;
-class Transaction{
+class Transaction
+{
 
 //    private float $amount;
 //    private string $description;
@@ -34,27 +35,29 @@ class Transaction{
 
 // ////////////////short construct
 
-    public function __construct(private float $amount,
-                                private ?string $description = null){
+    public function __construct(private float   $amount,
+                                private ?string $description = null)
+    {
 
         echo "<br>";
         echo "myClasses/:::";
         echo $description;
     }
 
-    public function addTax (float $rate): Transaction   //return object
+    public function addTax(float $rate): Transaction   //return object
     {
         $this->amount += $this->amount * $rate / 100;
         return $this;
     }
 
-    public function applyDiscount (float $rate): Transaction    //return object
+    public function applyDiscount(float $rate): Transaction    //return object
     {
         $this->amount -= $this->amount * $rate / 100;
         return $this;
     }
 
-    public function getAmount() : float {
+    public function getAmount(): float
+    {
         return $this->amount;
     }
 

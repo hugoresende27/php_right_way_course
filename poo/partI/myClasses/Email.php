@@ -2,7 +2,8 @@
 
 namespace myClasses;
 
-class Email {
+class Email
+{
 
     public function __construct()
     {

@@ -1,11 +1,10 @@
 <?php
 
-class DateTime2
+class Aaaa
 {
-
-
     public function __construct()
     {
-        echo "DateTime2()<hr>";
+        echo "AAA";
     }
+
 }
