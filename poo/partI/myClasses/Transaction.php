@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+namespace myClasses;
 class Transaction{
 
 //    private float $amount;
@@ -35,6 +37,8 @@ class Transaction{
     public function __construct(private float $amount,
                                 private ?string $description = null){
 
+        echo "<br>";
+        echo "myClasses/:::";
         echo $description;
     }
 

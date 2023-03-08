@@ -2,6 +2,7 @@
 
 require_once 'core.php';
 
+
 /* Classes & Objects */
 // class is like a blueprint and can instance multiple object
 // 1 class per file
